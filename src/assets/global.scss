@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'schwifty';
+  src: url('fonts/GetSchwifty-Regular.ttf') format('truetype'),
+  url('fonts/get_schwifty.eot'),
+  url('fonts/get_schwifty.woff2') format('woff2'),
+  url('fonts/GetSchwifty-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: schwifty, sans-serif;
+}
+
+a {
+
+  text-decoration: none;
+  color: inherit;
+
+  &:visited {
+    color: inherit;
+  }
+}
