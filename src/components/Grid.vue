@@ -21,13 +21,13 @@ export default {
   },
   methods: {
     async fetchData() {
-      let r = await fetch(this.firstQuery)
+      let r = await fetch(this.firstQuery).catch((err) => console.log(err))
       const data = await r.json()
       this.profiles = data.results
       this.nextQuery = data.info.next
     },
     async fetchMore() {
-      let r = await fetch(this.nextQuery)
+      let r = await fetch(this.nextQuery).catch((err) => console.log(err))
       const data = await r.json()
       this.profiles = this.profiles.concat(data.results)
       this.nextQuery = data.info.next
