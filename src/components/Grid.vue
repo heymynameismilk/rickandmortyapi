@@ -35,7 +35,7 @@ export default {
     scroll(){
       window.onscroll = () => {
         let bottom = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
-        if (bottom) {
+        if (bottom && this.nextQuery !== null) {
             this.fetchMore();
         }
       }
